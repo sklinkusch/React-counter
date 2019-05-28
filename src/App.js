@@ -19,32 +19,6 @@ class App extends Component {
     )
   }
 
-  updateCounter = (type) => {
-    switch (type) {
-      case 'INCREMENT':
-        console.log("going to increment");
-        return this.setState(state => {
-          return {
-            count: state.count + 1
-          };
-        });
-      case 'DECREMENT':
-        console.log("going to decrement");
-        return this.setState(state => {
-          return {
-            count: state.count - 1
-          };
-        });
-      default:
-        console.log("unknown type, returning state");
-        return this.setState(state => {
-          return {
-            count: state.count
-          };
-        });
-    }
-  }
-
   ToggleClick = () => {
     this.setState(
       prevState => {
