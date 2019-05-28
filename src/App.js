@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
+import { createStore } from 'redux';
+import { reducer } from './reducers'
 import logo from './logo.svg';
 import './App.css';
 import Counter from './components/Counter';
+
+// REMEMBER TO ATTACH THE DEVTOOLS
+const store = createStore(reducer)
 
 class App extends Component {
 
