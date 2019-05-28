@@ -14,7 +14,7 @@ class Counter extends Component {
         <h2>Counter with Redux</h2>
         <button onClick={this.increment}>+</button>
         <button onClick={this.decrement}>-</button>
-        <h2>I am a number</h2>
+        <h2>{this.props.count}</h2>
       </div>
     )
   }
