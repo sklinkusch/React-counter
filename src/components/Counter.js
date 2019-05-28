@@ -10,12 +10,17 @@ class Counter extends Component {
     this.props.dispatch({ type: "DECREASE" })
     console.log("Want to decrement")
   }
+  reset = () => {
+    this.props.dispatch({ type: "RESET" })
+    console.log("Resetted");
+  }
   render() {
     return (
       <div>
         <h2>Counter with Redux</h2>
         <button onClick={this.increment}>+</button>
         <button onClick={this.decrement}>-</button>
+        <button onClick={this.reset}>RESET</button>
         <h2>{this.props.count}</h2>
         <h3>Clicks: {this.props.click}</h3>
       </div>
