@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
-export default class Counter extends Component {
+class Counter extends Component {
   increment = () => {
     console.log("Want to increment")
   }
@@ -18,3 +19,11 @@ export default class Counter extends Component {
     )
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    count: state.count
+  }
+}
+
+export default connect(mapStateToProps)(Counter);
