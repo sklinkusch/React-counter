@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 import { reducer } from './reducers'
 import logo from './logo.svg';
 import './App.css';
@@ -39,7 +40,9 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <div className="App-intro">
-          <Counter />
+          <Provider store={store} >
+            <Counter />
+          </Provider>
         </div>
       </div>
     );
