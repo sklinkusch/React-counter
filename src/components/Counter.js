@@ -17,6 +17,7 @@ class Counter extends Component {
         <button onClick={this.increment}>+</button>
         <button onClick={this.decrement}>-</button>
         <h2>{this.props.count}</h2>
+        <h3>Clicks: {this.props.click}</h3>
       </div>
     )
   }
@@ -24,7 +25,8 @@ class Counter extends Component {
 
 const mapStateToProps = state => {
   return {
-    count: state.count
+    count: state.count,
+    click: state.click
   }
 }
 
