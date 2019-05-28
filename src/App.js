@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Counter from './components/Counter';
 
 class App extends Component {
 
@@ -59,14 +60,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <div className="App-intro">
-          <h2>Counter and Toggle - Update</h2>
-          <button onClick={() => this.updateCounter('INCREMENT')}>Click to increment by 1</button>
-          <button onClick={() => this.updateCounter('DECREMENT')}>Click to decrease by 1</button>
-          <button onClick={this.ToggleClick}>
-            {this.state.show ? 'Hide number' : 'Show number'}
-          </button>
-          <button onClick={this.Reset}>Reset</button>
-          {this.state.show ? <h2>{this.state.count}</h2> : ''}
+          <Counter />
         </div>
       </div>
     );
