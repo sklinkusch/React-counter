@@ -5,6 +5,7 @@ import { reducer } from './reducers'
 import logo from './logo.svg';
 import './App.css';
 import Counter from './components/Counter';
+import Footer from './components/Footer';
 
 const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
@@ -41,6 +42,7 @@ class App extends Component {
         <div className="App-intro">
           <Provider store={store} >
             <Counter />
+            <Footer />
           </Provider>
         </div>
       </div>
